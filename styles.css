@@ -11,10 +11,12 @@ body {
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 /* slot machine styles */
@@ -121,9 +123,8 @@ body {
   font-size: 15px;
   width: 100%;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 30px;
+  position: relative;
+  height: 5vh;
   color: #111;
 }
 
@@ -134,4 +135,50 @@ body {
 .copyright a:hover {
   background-color: #ffdeda;
   text-decoration: none;
+}
+
+/* Media query for Tablet */
+@media (max-width: 1024px) {
+  .machine {
+    width: 700px;
+  }
+
+  .slot {
+    font-size: 500%;
+  }
+}
+
+/* Media query for Mobile */
+@media (max-width: 560px) {
+  .container {
+    height: 850px;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+  .machine {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    border-width: 2px;
+  }
+
+  .slot {
+    font-size: 500%;
+    height: 150px;
+  }
+
+  #result {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .control {
+    margin-top: 40px;
+  }
+
+  .copyright {
+    height: 40px;
+  }
 }
