@@ -1,3 +1,5 @@
+'use strict';
+
 let values = ['😀', '😁', '😂', '🤣', '😄', '😅', '😆', '😉', '😋', '😍'];
 
 // selecting all elements
@@ -29,6 +31,7 @@ function spinValues() {
    * slotOne, slotTwo, slotThree
    * For each slot, using 'setInterval' method
    * Generate random emojis until the number of attempts is reached
+   * When the last slot has loaded, the victory function is called up
    */
   let slotOne = setInterval(() => {
     valueOne.innerHTML = values[randomNumber(values.length)];
