@@ -20,4 +20,6 @@ HTML5, CSS3, Vanilla JS
 
 ## Screenshots
 
-![Slot Machine](images/slot-machine.jpg)
+![slot-machine](https://user-images.githubusercontent.com/54701022/204044239-acc34257-4fd2-4406-a676-953fffe362dc.jpg)
+
+![slot-machine-victory](https://user-images.githubusercontent.com/54701022/204044282-68d7644c-a501-492e-bb35-6a21ba571c9b.jpg)
