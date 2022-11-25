@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* slot machine styles */
+.machine {
+  width: 900px;
+  max-width: 100%;
+  height: 300px;
+  background-color: #fee6e3;
+  border: dashed #111 3px;
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot {
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  font-size: 700%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.value {
+  animation: slotspin infinite 3s;
+}
+
+@keyframes slotspin {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* controls styles */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.play-btn {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.play-btn:after {
+  background-color: #111;
+  border-radius: 50px;
+  content: '';
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(4px, 4px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.play-btn:hover:after {
+  transform: translate(0, 0);
+}
+
+.play-btn:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.play-btn:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .play-btn {
+    padding: 0 40px;
+  }
+}
+
+/* Result text styles */
+.result {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
